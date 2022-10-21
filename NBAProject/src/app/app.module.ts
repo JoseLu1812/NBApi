@@ -15,6 +15,7 @@ import { TeamsListComponent } from './components/teams/teams-list/teams-list.com
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FlexLayoutModule,
     MaterialImportsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialImportsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
