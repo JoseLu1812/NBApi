@@ -12,10 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
 =======
 >>>>>>> 3-players
+=======
+import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
+import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
+>>>>>>> fdb56d0248998f486172030f3568d8acb535b698
 import { MaterialImportsModule } from './modules/material-imports.module';
 
 
