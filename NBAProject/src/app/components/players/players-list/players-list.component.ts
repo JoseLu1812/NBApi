@@ -9,8 +9,8 @@ import { Player } from 'src/app/interfaces/players.interface';
 })
 export class PlayersListComponent implements OnInit {
 
-  year = 2022 ;
-  id = "0";
+  yearsData: number[] = [2022, 2021, 2020, 2019, 2018, 2017, 2016];
+  year: number = 0;
   playerList: Player[] = [];
 
   constructor(private playersService: PlayersService) { }
@@ -21,16 +21,10 @@ export class PlayersListComponent implements OnInit {
     })
   }
 
-
-  showPlayerName(name: string, lastName: string, id: string){
-    for (let item of this.playerList) {
-      if(item.personId == this.id){
-        if((item.firstName == name) && (item.lastName == lastName)){
-          return (item.firstName,'  ',item.lastName);
-        }
-      }
-    }
-    return undefined
+  getPlayersByYear(year: number) {
+    this.playersService.getPlayerList(year).subscribe(resp => {
+      this.playerList = resp.league.standard;
+    })
   }
 
   showPlayerImage(p: Player){
