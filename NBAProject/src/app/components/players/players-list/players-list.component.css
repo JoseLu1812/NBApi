@@ -1,3 +1,27 @@
-h1{
-    color: black;
+
+#content {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.example-card {
+    width: 500px;
+    border-radius: 15px;
+    border-color: black;
+    border: solid;
 }
+
+
+.titulo{
+    padding-top: 5px;
+    color: black;
+    text-align: center;
+    border-radius: 15%;
+    border-color: black;
+    font-size: x-large;
+}
+
+.header{
+    justify-content: center; 
+}
+
