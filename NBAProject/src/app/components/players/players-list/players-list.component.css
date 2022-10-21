@@ -1,27 +1,37 @@
-
-#content {
-    flex-wrap: wrap;
-    width: 100%;
+body {
+    background-color: black;
   }
   
-.example-card {
-    width: 500px;
-    border-radius: 15px;
-    border-color: black;
-    border: solid;
-}
-
-
-.titulo{
-    padding-top: 5px;
-    color: black;
+  .center {
     text-align: center;
-    border-radius: 15%;
-    border-color: black;
-    font-size: x-large;
-}
-
-.header{
-    justify-content: center; 
-}
+  }
+  
+  .align-items {
+    align-items: center;
+  }
+  
+  .padding {
+    padding: 20px;
+  }
+  
+  .white {
+    color: #FFF!important;
+  }
+  
+  .background-white {
+    background-color: #FFF;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .example-card {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 15%;
+    background-color: white;
+  }
+  
 
