@@ -1,1 +1,22 @@
-<p>teams-details works!</p>
+<body>
+  <header>
+    <div class="center">
+      <img
+        src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png"
+        alt="Logo NBA" width="30%">
+    </div>
+  </header>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="aling-items padding" style="margin-bottom: 20px;">
+    <div class="white" style="font-size: 24pt;">
+      <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span> / </span><a routerLink="/teams-list" class="color-decoration">Teams</a><span> / {{team.fullName}}</span>
+    </div>
+  </div>
+  <div fxLayout="row" class="background-white" style="width: 60%; margin: 0 auto;">
+    <div style="width: 40%;">
+      <img [src]="showTeamImages(team)">
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-around start">
+
+    </div>
+  </div>
+</body>
