@@ -14,6 +14,7 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
 import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
 import { MaterialImportsModule } from './modules/material-imports.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MaterialImportsModule } from './modules/material-imports.module';
     RouterModule,
     HttpClientModule,
     FlexLayoutModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
