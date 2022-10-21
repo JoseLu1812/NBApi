@@ -16,13 +16,10 @@ export class PlayersListComponent implements OnInit {
   constructor(private playersService: PlayersService) { }
 
   ngOnInit(): void {
-
     this.playersService.getPlayerList(2022).subscribe(resp => {
       this.playerList = resp.league.standard;
     })
   }
-
-
 
 
   showPlayerName(name: string, lastName: string, id: string){
@@ -34,6 +31,10 @@ export class PlayersListComponent implements OnInit {
       }
     }
     return undefined
+  }
+
+  showPlayerImage(p: Player){
+    return `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${p.personId}.png`
   }
 
 }

@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { MaterialImportsModule } from './modules/material-imports.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
