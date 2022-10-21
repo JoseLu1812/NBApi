@@ -11,8 +11,11 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
+<<<<<<< HEAD
 import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
+=======
+>>>>>>> 3-players
 import { MaterialImportsModule } from './modules/material-imports.module';
 
 
