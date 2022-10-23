@@ -11,12 +11,23 @@
       <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span> / </span><a routerLink="/teams-list" class="color-decoration">Teams</a><span> / {{team.fullName}}</span>
     </div>
   </div>
-  <div fxLayout="row" class="background-white" style="width: 60%; margin: 0 auto;">
-    <div style="width: 40%;">
+  <div fxLayout="row" class="background-white details-container">
+    <div class="img-container">
       <img [src]="showTeamImages(team)">
     </div>
-    <div fxLayout="column" fxLayoutAlign="space-around start">
-
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <div class="padding">
+        <strong style="font-size: 20pt;">{{team.fullName}}</strong>
+        <br>
+        <ul style="font-size: 12pt;">
+          <li>Ciudad: {{team.city}}</li>
+          <li>División: {{team.divName}}</li>
+          <li>Conferencia: {{team.confName}}</li>
+          <li>Nickname: {{team.nickname}}</li>
+          <li>Acrónimo: {{team.tricode}}</li>
+          <li>¿Es equipo de NBA?: {{team.isNBAFranchise}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

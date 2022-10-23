@@ -26,3 +26,13 @@ body {
 .white {
   color: #FFF!important;
 }
+
+.details-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.img-container {
+  width: 40%;
+  margin-right: 16px;
+}

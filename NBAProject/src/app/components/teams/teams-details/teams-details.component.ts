@@ -18,7 +18,7 @@ export class TeamsDetailsComponent implements OnInit {
   constructor(private teamsService: TeamsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((res) => {
+    this.route.params.subscribe(res => {
       this.year = res['year'];
       this.urlName = res['urlName'];
     })
