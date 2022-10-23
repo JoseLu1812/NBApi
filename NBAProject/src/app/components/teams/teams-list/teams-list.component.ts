@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Team, TeamResponse } from 'src/app/interfaces/teams.interface';
+import { Team } from 'src/app/interfaces/teams.interface';
 import { TeamsService } from 'src/app/services/teams.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class TeamsListComponent implements OnInit {
   getTeamsByYear(year: number) {
     this.teamsService.getTeams(year).subscribe(resp => {
       this.teamList = resp.league.standard;
+      this.year = year;
     })
   }
 
