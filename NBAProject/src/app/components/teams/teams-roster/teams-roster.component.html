@@ -13,9 +13,9 @@
   </div>
   <div fxLayout="row grap" fxLayoutAlign="space-around start" class="justify-content-center" style="background-color: black;">
     <mat-card class="example-card" *ngFor="let player of playersOfSameTeam">
-      <mat-card-header>
-        <h2>{{player.firstName}} {{player.lastName}}</h2>
-      </mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{player.firstName}} {{player.lastName}}</mat-card-title>
+      </mat-card-title-group>
       <img mat-card-image [src]="showPlayersImages(player)" onerror="this.src='https://img2.freepng.es/20180603/jx/kisspng-user-interface-design-computer-icons-default-stephen-salazar-photography-5b1462e1b19d70.1261504615280626897275.jpg'">
     </mat-card>
   </div>
