@@ -5,13 +5,15 @@ import { PlayersListComponent } from './components/players/players-list/players-
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
 import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
+import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
 
 const routes: Routes = [
   {path: 'players-list', component: PlayersListComponent },
   {path: '', redirectTo: '/initial-page', pathMatch: 'full'},
   {path: 'initial-page', component: InitialPageComponent},
   {path: 'teams-list', component: TeamsListComponent},
-  {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent}
+  {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent},
+  {path: 'team-roster/:year/:urlName', component: TeamsRosterComponent}
 ];
 
 @NgModule({
