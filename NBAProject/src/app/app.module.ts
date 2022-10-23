@@ -16,6 +16,7 @@ import { TeamsDetailsComponent } from './components/teams/teams-details/teams-de
 import { MaterialImportsModule } from './modules/material-imports.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     PlayersDetailsComponent,
     InitialPageComponent,
     TeamsListComponent,
-    TeamsDetailsComponent
+    TeamsDetailsComponent,
+    TeamsRosterComponent
   ],
   imports: [
     BrowserModule,

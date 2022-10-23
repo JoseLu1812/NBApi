@@ -31,7 +31,8 @@
         onerror="this.src='https://resize.sprintercdn.com/f/261x261/products/ad20439f-5912-4821-a8aa-8a306dea2ed3/pelota-baloncesto-wilson-all-star_ad20439f-5912-4821-a8aa-8a306dea2ed3_1_2364842133.jpg'">
       <mat-card-actions>
         <a mat-button [routerLink]="['/team-details', year, team.urlName]">DETAILS</a>
-        <a mat-button>ROSTER</a>
+
+        <a mat-button [routerLink]="['/team-roster', year, team.urlName]">ROSTER</a>
       </mat-card-actions>
     </mat-card>
   </div>
