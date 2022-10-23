@@ -1,14 +1,43 @@
 
 
-
 <body>
-    <header>
-        <div class="center">
-          <img
-            src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png"
-            alt="Logo NBA" width="30%">
-        </div>
-    </header>
-    <div>
+  <header>
+    <div class="center">
+      <img
+        src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png"
+        alt="Logo NBA" width="30%">
     </div>
+  </header>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="aling-items padding" style="margin-bottom: 20px;">
+    <div class="white" style="font-size: 24pt;">
+      <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span> / </span><a routerLink="/players-list" class="color-decoration">Player</a><span> / {{player.firstName}} {{player.lastName}}</span>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center"  class="background-white details-container">
+    <div class="img-container">
+      <img [src]="showPlayerImages(player)" alt="Jugador NBA">
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center start">
+      <div class="padding">
+        <strong style="font-size: 20pt;"><h3>{{player.firstName}} {{player.lastName}}</h3></strong>
+        <br>
+        <ul style="font-size: 12pt;">
+          <h1>Nacionalidad:  {{player.country}}</h1>
+          <li>Fecha de Nacimiento: {{player.dateOfBirthUTC}}</li>
+          <li>Posición: {{player.pos}}</li>
+          <li>Dorsal: {{player.jersey}}</li>
+          <li>Años Activo: {{player.yearsPro}}</li>
+          <h1>{{player.teams}}</h1>
+        </ul>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <div fxLayout="column"  fxLayoutAlign="end center">
+        <h3>DORSAL</h3>
+        <h1>{{player.jersey}}</h1>
+      </div>
+    </div>
+  </div>
 </body>
+
+

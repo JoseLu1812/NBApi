@@ -16,14 +16,13 @@ export class PlayersListComponent implements OnInit {
   constructor(private playersService: PlayersService) { }
 
   ngOnInit(): void {
-    this.playersService.getPlayerList(2022).subscribe(resp => {
-      this.playerList = resp.league.standard;
-    })
+    this.getPlayersByYear(2022);
   }
 
   getPlayersByYear(year: number) {
     this.playersService.getPlayerList(year).subscribe(resp => {
       this.playerList = resp.league.standard;
+      this.year = year;
     })
   }
 

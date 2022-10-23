@@ -10,16 +10,10 @@ import { PlayerResponse } from "src/app/interfaces/players.interface";
 })
 export class PlayersService {
 
-
-
   constructor(private http: HttpClient) { }
 
   public getPlayerList(year: number): Observable<PlayerResponse> {
     return this.http.get<PlayerResponse>(`${environment.apiBaseUrl}/${year}/players.json`)
-  }
-
-  public getPlayerDetails(year: number,id: string): Observable<PlayerResponse> {
-    return this.http.get<PlayerResponse>(`${environment.apiBaseUrl}/${year}/players/${id}_profile.json`)
   }
 
 }
