@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.white {
+  color: #FFF!important;
+}
+
+.background-white {
+  background-color: #FFF;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.example-card {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 15%;
+  background-color: white;
+}
+
+
