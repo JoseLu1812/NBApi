@@ -7,6 +7,7 @@ import { TeamsListComponent } from './components/teams/teams-list/teams-list.com
 import { PlayersDetailsComponent } from './components/players/players-details/players-details.component';
 import { TeamsDetailsComponent } from './components/teams/teams-details/teams-details.component';
 import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { StandingsComponent } from './components/standings/standings.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'player-details/:year/:personId', component: PlayersDetailsComponent},
   {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent},
   {path: 'team-roster/:year/:urlName', component: TeamsRosterComponent},
+  {path: '**', component: ErrorPageComponent},
   {path: 'standings', component: StandingsComponent}
 ];
 
@@ -25,3 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
