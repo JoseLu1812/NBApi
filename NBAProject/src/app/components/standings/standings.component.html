@@ -15,12 +15,46 @@
     <mat-tab-group>
       <mat-tab label="East">
         <table>
-          <ng-container matColumnDef="team">
-            <th mat-header-cell *matHeaderCellDef>TEAM</th>
-            <td *ngFor="let team of eastTeams">
-              <a href="" fxLayout="row">{{team.fullName}}</a>
-            </td>
-          </ng-container>
+          <thead>
+            <tr>
+              <th>TEAMS</th>
+              <th>W</th>
+              <th>L</th>
+              <th>WIN%</th>
+              <th>LOSE%</th>
+              <th>GB</th>
+              <th>CONF</th>
+              <th>DIV</th>
+              <th>HOME</th>
+              <th>ROAD</th>
+              <th>LAST10</th>
+              <th>STREAK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let east of eastStandings">
+              <td>
+                <a [routerLink]="['/team-roster', 2019, east.teamId] " fxLayout="row" class="team">
+                  <span style="margin-right: 5px;">{{eastStandings.indexOf(east)+1}}</span>
+                  <div>
+                    <img [src]="showTeamImages(east.teamId)">
+                  </div>
+                  <span *ngFor="let team of eastTeams"><span *ngIf="team.teamId == east.teamId">{{team.fullName}}</span></span>
+                </a>
+              </td>
+              <td>{{east.win}}</td>
+              <td>{{east.loss}}</td>
+              <td>{{east.winPct}}</td>
+              <td>{{east.lossPct}}</td>
+              <td>{{east.gamesBehind}}</td>
+              <td>{{east.confWin}} - {{east.confLoss}}</td>
+              <td>{{east.divWin}} - {{east.divLoss}}</td>
+              <td>{{east.homeWin}} - {{east.homeLoss}}</td>
+              <td>{{east.awayWin}} - {{east.awayLoss}}</td>
+              <td>{{east.lastTenWin}} - {{east.lastTenLoss}}</td>
+              <td>{{east.streak}}</td>
+            </tr>
+          </tbody>
         </table>
       </mat-tab>
       <mat-tab label="West">
@@ -31,28 +65,38 @@
               <th>W</th>
               <th>L</th>
               <th>WIN%</th>
+              <th>LOSE%</th>
               <th>GB</th>
               <th>CONF</th>
               <th>DIV</th>
               <th>HOME</th>
               <th>ROAD</th>
-              <th>OT</th>
               <th>LAST10</th>
               <th>STREAK</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let team of westTeams" >
+            <tr *ngFor="let west of westStandings">
               <td>
-                <a href="" fxLayout="row">
-                  <span>{{westTeams.indexOf(team)+1}}</span>
+                <a [routerLink]="['/team-roster', 2019, west.teamId] " fxLayout="row" class="team">
+                  <span style="margin-right: 5px;">{{westStandings.indexOf(west)+1}}</span>
                   <div>
-                    <img [src]="showTeamImages(team)" width="24px">
+                    <img [src]="showTeamImages(west.teamId)">
                   </div>
-                  <span>{{team.fullName}}</span>
+                  <span *ngFor="let team of westTeams"><span *ngIf="team.teamId == west.teamId">{{team.fullName}}</span></span>
                 </a>
               </td>
-              <td>{{westTeamStandings.win}}</td>
+              <td>{{west.win}}</td>
+              <td>{{west.loss}}</td>
+              <td>{{west.winPct}}</td>
+              <td>{{west.lossPct}}</td>
+              <td>{{west.gamesBehind}}</td>
+              <td>{{west.confWin}} - {{west.confLoss}}</td>
+              <td>{{west.divWin}} - {{west.divLoss}}</td>
+              <td>{{west.homeWin}} - {{west.homeLoss}}</td>
+              <td>{{west.awayWin}} - {{west.awayLoss}}</td>
+              <td>{{west.lastTenWin}} - {{west.lastTenLoss}}</td>
+              <td>{{west.streak}}</td>
             </tr>
           </tbody>
         </table>

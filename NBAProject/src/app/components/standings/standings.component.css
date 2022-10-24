@@ -24,5 +24,52 @@ body {
 }
 
 .white {
-  color: #FFF!important;
+  color: #FFF !important;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 15px;
+}
+
+thead {
+  text-transform: uppercase;
+}
+
+thead tr th, td {
+  padding: 10px;
+}
+
+thead, tbody {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 10%);
+}
+
+tbody tr .team {
+  align-items: center;
+  font-weight: normal;
+  font-style: normal;
+  padding-top: 10px;
+  text-decoration: none;
+  color: #0465c8;
+}
+
+tbody tr .team div img {
+  width: 24px;
+  margin-right: 5px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+table tr:hover {
+  background-color: #98c7ec;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #F5F5F5;
 }
