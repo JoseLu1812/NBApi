@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'basket';
+    src: url('../../../app/fonts/Basketball.otf');
+}
+
+body{
+    background-color: black;
+}
+
+button{
+    height: 100px;
+    width: 450px;
+    font-size: 50pt;
+    font-family: 'basket', sans-serif;
+}
+
+h1{
+    color: white; 
+    height: 60px;
+    padding: 50px;
+    font-size: 50pt;
+    font-family: 'basket', sans-serif;
+}
+
+.cuadro{
+    background-image: url('https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/04/20/16504392433630.jpg');
+    height: 700px;
+    width: 1800px;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+}
+
+.center{
+    text-align: center;
+  }

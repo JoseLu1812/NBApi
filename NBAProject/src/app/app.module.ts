@@ -17,6 +17,7 @@ import { MaterialImportsModule } from './modules/material-imports.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TeamsRosterComponent } from './components/teams/teams-roster/teams-rost
     InitialPageComponent,
     TeamsListComponent,
     TeamsDetailsComponent,
-    TeamsRosterComponent
+    TeamsRosterComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
