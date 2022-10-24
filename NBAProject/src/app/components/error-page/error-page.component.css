@@ -15,7 +15,7 @@ button{
 }
 
 h1{
-    color: white; 
+    color: white;
     height: 60px;
     padding: 50px;
     font-size: 50pt;
@@ -24,8 +24,7 @@ h1{
 
 .cuadro{
     background-image: url('https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/04/20/16504392433630.jpg');
-    height: 700px;
-    width: 1800px;
+    height: max-content;
     background-repeat: no-repeat;
     margin-left: 100px;
 }
