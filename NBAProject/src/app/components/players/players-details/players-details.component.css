@@ -1,13 +1,28 @@
+@font-face {
+  font-family: 'basket';
+  src: url('../../../fonts/Basketball.otf');
+}
+
 body {
   background-color: black;
+  font-family: 'basket', sans-serif;
+}
+
+.background-white {
+  background-color: white;
 }
 
 .center {
   text-align: center;
 }
 
+.color-decoration {
+  color: #81D4FA;
+  text-decoration: none;
+}
+
 .align-items {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .padding {
@@ -18,20 +33,33 @@ body {
   color: #FFF!important;
 }
 
-.background-white {
-  background-color: #FFF;
+.details-container {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
 }
 
-.justify-content-center {
-  justify-content: center;
+.img-container {
+  width: 40%;
 }
 
-.example-card {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 15%;
-  background-color: white;
+.titulo{
+  text-align: center;
 }
 
+.dorsal{
+  padding-left: 20%;
+  align-items: flex-end;
+}
 
+tr{
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+}
+
+h1, h2, h3{
+  font-family: 'basket', sans-serif;
+}
