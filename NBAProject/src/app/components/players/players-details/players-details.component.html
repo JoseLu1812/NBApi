@@ -13,31 +13,60 @@
       <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span> / </span><a routerLink="/players-list" class="color-decoration">Player</a><span> / {{player.firstName}} {{player.lastName}}</span>
     </div>
   </div>
-  <div fxLayout="row" fxLayoutAlign="center center"  class="background-white details-container">
-    <div class="img-container">
-      <img [src]="showPlayerImages(player)" alt="Jugador NBA">
+    <div class="background-white" >
+        <div class="titulo padding">
+                <h1 style="font-size: 50pt; padding: 5px;">{{player.firstName}} {{player.lastName}}</h1>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" class="details-container">
+            
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="img-container padding">
+            <img [src]="showPlayerImages(player)" width="70%" alt="Jugador NBA">
+            </div>
+            <div fxLayout="column" fxLayoutAlign="start start">
+            <div>
+                <br>
+
+                <table style="font-size: 25pt; align-items: flex-start;">
+                    <tbody>
+                        <tr>
+                            <th>Country:</th>
+                            <td></td>
+                            <td>{{player.country}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Position:</th>
+                            <td></td>
+                            <td>{{player.pos}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Heigh:</th>
+                            <td></td>
+                            <td>{{player.heightMeters}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Team:</th>
+                            <td></td>
+                            <td>{{teamOfPlayer.fullName}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Birth:</th>
+                            <td></td>
+                            <td>{{player.dateOfBirthUTC}}</td>
+                        </tr>
+                </table>
+            </div>
+            </div> 
+        <div class="dorsal">
+            <h3 style="font-size: 50pt; font-style: italic; text-align: center;">DORSAL</h3>
+            <h1 style="font-size: 100pt; padding: 50px; text-align: center;">{{player.jersey}}</h1>
+        </div>   
+        </div>
+           
     </div>
-    <div fxLayout="column" fxLayoutAlign="center start">
-      <div class="padding">
-        <strong style="font-size: 20pt;"><h3>{{player.firstName}} {{player.lastName}}</h3></strong>
-        <br>
-        <ul style="font-size: 12pt;">
-          <h1>Nacionalidad:  {{player.country}}</h1>
-          <li>Fecha de Nacimiento: {{player.dateOfBirthUTC}}</li>
-          <li>Posición: {{player.pos}}</li>
-          <li>Dorsal: {{player.jersey}}</li>
-          <li>Años Activo: {{player.yearsPro}}</li>
-          <h1>{{player.teams}}</h1>
-        </ul>
-      </div>
-    </div>
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <div fxLayout="column"  fxLayoutAlign="end center">
-        <h3>DORSAL</h3>
-        <h1>{{player.jersey}}</h1>
-      </div>
-    </div>
-  </div>
 </body>
 
 

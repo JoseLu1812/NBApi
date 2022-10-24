@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from 'src/app/interfaces/players.interface';
+import { Team } from "src/app/interfaces/teams.interface";
 import { PlayersService } from 'src/app/services/players.service';
 import { ActivatedRoute } from '@angular/router';
+import { TeamsService } from 'src/app/services/teams.service';
+import { throwDialogContentAlreadyAttachedError } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-players-details',
@@ -10,13 +13,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlayersDetailsComponent implements OnInit {
   player: Player = {} as Player;
+  teamOfPlayer: Team = {} as Team;
   year: number = 0;
   id: string = '';
   playerList: Player[] = [];
+  teamList: Team[] = [];
 
   constructor(
     private playersService: PlayersService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private teamService: TeamsService
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +31,7 @@ export class PlayersDetailsComponent implements OnInit {
       this.id = resp['personId'];
     });
     this.getPlayer();
+    this.getPlayerTeam();
   }
 
   getPlayer() {
@@ -36,6 +43,18 @@ export class PlayersDetailsComponent implements OnInit {
         }
       }
     });
+  }
+
+  getPlayerTeam() {
+    this.teamService.getTeams(this.year).subscribe(resp => {
+      this.teamList = resp.league.standard;
+      for (let t of this.teamList) {
+        if(t.teamId == this.player.teamId){
+          this.teamOfPlayer = t;
+        }
+      }    
+    })
+
   }
 
   showPlayerImages(p: Player) {
