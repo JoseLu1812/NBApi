@@ -11,33 +11,44 @@ import { TeamsService } from 'src/app/services/teams.service';
 })
 export class StandingsComponent implements OnInit {
 
+  westStandings: West[] = [];
   eastStandings: East[] = [];
-  westStandings: West[] = []; //clasificacion
-  westTeamStandings: West = {} as West;
-  teamList: Team[] = []; //equipos
-  westTeams: Team[] = []; //equipos
+  teamList: Team[] = [];
+  westTeams: Team[] = [];
   eastTeams: Team[] = [];
-  clasification: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
   constructor(private standingsService: StandingsService, private teamsService: TeamsService) { }
 
   ngOnInit(): void {
-    this.getEastStandings('current');
-    this.getWestStandings('20190223');
-    this.getTeamsOfWestConference();
-    this.getTeamsOfEastConference();
+    this.getWestStandings('20190312');
+    this.getEastStandings('20190312');
   }
 
   getEastStandings(date: string) {
     this.standingsService.getStandings(date).subscribe(res => {
       this.eastStandings = res.league.standard.conference.east;
-    })
+      this.getTeamsOfEastConference();
+    });
+  }
+
+  getTeamsOfEastConference() {
+    this.teamsService.getTeams(2019).subscribe(res => {
+      this.teamList = res.league.standard;
+      for (let e of this.eastStandings) {
+        for (let t of this.teamList) {
+          if (t.teamId == e.teamId) {
+            this.eastTeams.push(t);
+          }
+        }
+      }
+    });
   }
 
   getWestStandings(date: string) {
     this.standingsService.getStandings(date).subscribe(res => {
       this.westStandings = res.league.standard.conference.west;
-    })
+      this.getTeamsOfWestConference();
+    });
   }
 
   getTeamsOfWestConference() {
@@ -50,24 +61,11 @@ export class StandingsComponent implements OnInit {
           }
         }
       }
-    })
+    });
   }
 
-  getTeamsOfEastConference() {
-    this.teamsService.getTeams(2020).subscribe(res => {
-      this.teamList = res.league.standard;
-      for (let t of this.teamList) {
-        for (let e of this.eastStandings) {
-          if (t.teamId == e.teamId) {
-            this.eastTeams.push(t);
-          }
-        }
-      }
-    })
-  }
-
-  showTeamImages(t: Team) {
-    return `https://cdn.nba.com/logos/nba/${t.teamId}/global/L/logo.svg`
+  showTeamImages(t: string) {
+    return `https://cdn.nba.com/logos/nba/${t}/global/L/logo.svg`
   }
 
 }
