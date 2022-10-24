@@ -13,7 +13,7 @@
     </div>
     <div>
       <mat-form-field appearance="fill" class="background-white">
-        <mat-label>Selecciona un año</mat-label>
+        <mat-label>Select year</mat-label>
         <mat-select [(ngModel)]="year">
           <mat-option *ngFor="let year of yearsData" [value]="year" (click)="getTeamsByYear(year)">{{year}}
           </mat-option>
@@ -24,15 +24,14 @@
   <div fxLayout="row wrap" fxLayoutAlign="space-around start" class="justify-content-center"
     style="background-color: black;">
     <mat-card class="example-card" *ngFor="let team of teamList">
-      <mat-card-header>
-        <h2>{{team.fullName}}</h2>
-      </mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{team.fullName}}</mat-card-title>
+      </mat-card-title-group>
       <img mat-card-image [src]="showTeamImages(team)"
         onerror="this.src='https://resize.sprintercdn.com/f/261x261/products/ad20439f-5912-4821-a8aa-8a306dea2ed3/pelota-baloncesto-wilson-all-star_ad20439f-5912-4821-a8aa-8a306dea2ed3_1_2364842133.jpg'">
       <mat-card-actions>
-        <a mat-button [routerLink]="['/team-details', year, team.urlName]">DETAILS</a>
-
-        <a mat-button [routerLink]="['/team-roster', year, team.urlName]">ROSTER</a>
+        <a mat-button style="font-family: 'basket', sans-serif;" [routerLink]="['/team-details', year, team.urlName]">DETAILS</a>
+        <a mat-button style="font-family: 'basket', sans-serif;" [routerLink]="['/team-roster', year, team.teamId]">ROSTER</a>
       </mat-card-actions>
     </mat-card>
   </div>

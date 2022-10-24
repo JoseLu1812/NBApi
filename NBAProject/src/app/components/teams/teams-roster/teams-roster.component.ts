@@ -15,7 +15,7 @@ export class TeamsRosterComponent implements OnInit {
   playersOfSameTeam: Player[] = [];
   team: Team = {} as Team;
   year: number = 0;
-  urlName: string = '';
+  teamId: string = '';
   teamList: Team[] = [];
   playerList: Player[] = [];
 
@@ -24,7 +24,7 @@ export class TeamsRosterComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(res => {
       this.year = res['year'];
-      this.urlName = res['urlName'];
+      this.teamId = res['teamId'];
     })
     this.getTeams();
     this.getPlayersOfSameTeam();
@@ -45,7 +45,7 @@ export class TeamsRosterComponent implements OnInit {
     this.teamsService.getTeams(this.year).subscribe(res => {
       this.teamList = res.league.standard;
       for (let team of this.teamList) {
-        if(team.urlName == this.urlName) {
+        if(team.teamId == this.teamId) {
           this.team = team;
         }
       }
