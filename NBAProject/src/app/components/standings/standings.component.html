@@ -1,0 +1,62 @@
+<body>
+  <header>
+    <div class="center">
+      <img
+        src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png"
+        alt="Logo NBA" width="30%">
+    </div>
+  </header>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="aling-items padding" style="margin-bottom: 20px;">
+    <div class="white" style="font-size: 24pt;">
+      <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span> / </span><span> Standings</span>
+    </div>
+  </div>
+  <div style="background-color: white;">
+    <mat-tab-group>
+      <mat-tab label="East">
+        <table>
+          <ng-container matColumnDef="team">
+            <th mat-header-cell *matHeaderCellDef>TEAM</th>
+            <td *ngFor="let team of eastTeams">
+              <a href="" fxLayout="row">{{team.fullName}}</a>
+            </td>
+          </ng-container>
+        </table>
+      </mat-tab>
+      <mat-tab label="West">
+        <table>
+          <thead>
+            <tr>
+              <th>TEAMS</th>
+              <th>W</th>
+              <th>L</th>
+              <th>WIN%</th>
+              <th>GB</th>
+              <th>CONF</th>
+              <th>DIV</th>
+              <th>HOME</th>
+              <th>ROAD</th>
+              <th>OT</th>
+              <th>LAST10</th>
+              <th>STREAK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let team of westTeams" >
+              <td>
+                <a href="" fxLayout="row">
+                  <span>{{westTeams.indexOf(team)+1}}</span>
+                  <div>
+                    <img [src]="showTeamImages(team)" width="24px">
+                  </div>
+                  <span>{{team.fullName}}</span>
+                </a>
+              </td>
+              <td>{{westTeamStandings.win}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</body>

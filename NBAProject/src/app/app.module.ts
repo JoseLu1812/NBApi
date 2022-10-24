@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
-
+import { StandingsComponent } from './components/standings/standings.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     TeamsListComponent,
     TeamsDetailsComponent,
     TeamsRosterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    StandingsComponent
   ],
   imports: [
     BrowserModule,

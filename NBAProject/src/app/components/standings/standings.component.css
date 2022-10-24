@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.color-decoration {
+  color: #81D4FA;
+  text-decoration: none;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.white {
+  color: #FFF!important;
+}
