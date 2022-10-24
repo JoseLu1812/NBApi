@@ -18,8 +18,9 @@ const routes: Routes = [
   {path: 'player-details/:year/:personId', component: PlayersDetailsComponent},
   {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent},
   {path: 'team-roster/:year/:urlName', component: TeamsRosterComponent},
-  {path: '**', component: ErrorPageComponent},
-  {path: 'standings', component: StandingsComponent}
+  {path: 'standings', component: StandingsComponent},
+  {path: '**', component: ErrorPageComponent}
+
 ];
 
 @NgModule({
