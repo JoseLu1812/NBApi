@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'teams-list', component: TeamsListComponent},
   {path: 'player-details/:year/:personId', component: PlayersDetailsComponent},
   {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent},
-  {path: 'team-roster/:year/:urlName', component: TeamsRosterComponent},
+  {path: 'team-roster/:year/:teamId', component: TeamsRosterComponent},
   {path: 'standings', component: StandingsComponent},
   {path: '**', component: ErrorPageComponent}
 
