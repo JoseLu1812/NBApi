@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'basket';
+    src: url('../../fonts/Basketball.otf');
+  }
+  
+  body {
+      background-color: black;
+      font-family: 'basket', sans-serif;
+      height: max-content;
+    }
+
+    .example-card {
+        max-width: 400px;
+        margin-bottom: 8px;
+    }
+
+    .center {
+        text-align: center;
+    }
+      
+    .color-decoration {
+        color: #81D4FA;
+        text-decoration: none;
+    }
+      
+    .align-items {
+        align-items: flex-start;
+    }
+
+      
+  .white {
+    color: #FFF!important;
+  }
+
+  .table {
+    background-color: white;
+    width: max-content;
+    color: black;
+    font-size: 50pt;
+    padding: 30px;
+  }
+
+  p{
+    color: black;
+  }

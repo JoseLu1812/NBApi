@@ -9,6 +9,7 @@ import { TeamsDetailsComponent } from './components/teams/teams-details/teams-de
 import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { StandingsComponent } from './components/standings/standings.component';
+import { CoachesComponent } from './components/coaches/coaches.component';
 
 const routes: Routes = [
   {path: 'players-list', component: PlayersListComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'team-details/:year/:urlName', component: TeamsDetailsComponent},
   {path: 'team-roster/:year/:teamId', component: TeamsRosterComponent},
   {path: 'standings', component: StandingsComponent},
+  {path: 'coaches', component: CoachesComponent},
   {path: '**', component: ErrorPageComponent}
 
 ];

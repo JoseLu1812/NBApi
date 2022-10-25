@@ -54,7 +54,6 @@ export class PlayersDetailsComponent implements OnInit {
         }
       }    
     })
-
   }
 
   showPlayerImages(p: Player) {
