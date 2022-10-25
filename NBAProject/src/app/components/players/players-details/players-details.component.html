@@ -15,13 +15,13 @@
   </div>
   <div class="background-white">
     <div class="titulo padding">
-      <img [src]="showTeamsImages(player)" width="5%" style="margin-bottom: 20px;">
+      <img [src]="showTeamsImages(player)" width="5%" style="margin-bottom: 20px;" onerror="this.src='https://media.istockphoto.com/vectors/question-mark-in-a-shield-icon-vector-sign-and-symbol-isolated-on-vector-id1023572464?k=20&m=1023572464&s=170667a&w=0&h=EopKUPT7ix-yq92EZkAASv244wBsn_z-fbNpyxxTl6o='">
       <h1 style="font-size: 50pt; padding: 5px;">{{player.firstName}} {{player.lastName}}</h1>
     </div>
     <div fxLayout="row" fxLayoutAlign="center center" class="details-container">
 
       <div style="overflow: hidden;" fxLayout="row" fxLayoutAlign="space-between center" class="img-container padding">
-        <img [src]="showPlayerImages(player)" width="70%" alt="Jugador NBA">
+        <img [src]="showPlayerImages(player)" width="70%" alt="Jugador NBA" onerror="this.src='https://cdn-icons-png.flaticon.com/512/30/30234.png'">
       </div>
       <div fxLayout="column" fxLayoutAlign="start start">
         <div>
