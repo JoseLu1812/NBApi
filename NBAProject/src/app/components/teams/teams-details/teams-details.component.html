@@ -20,12 +20,13 @@
         <strong style="font-size: 20pt;">{{team.fullName}}</strong>
         <br>
         <ul style="font-size: 12pt;">
-          <li>Ciudad: {{team.city}}</li>
-          <li>División: {{team.divName}}</li>
-          <li>Conferencia: {{team.confName}}</li>
+          <li>City: {{team.city}}</li>
+          <li>Division: {{team.divName}}</li>
+          <li>Conference: {{team.confName}}</li>
           <li>Nickname: {{team.nickname}}</li>
-          <li>Acrónimo: {{team.tricode}}</li>
-          <li>¿Es equipo de NBA?: {{team.isNBAFranchise}}</li>
+          <li>Acronym: {{team.tricode}}</li>
+          <li>Is a NBA team?: <mat-icon style="position: relative; top: 5px;">{{team.isNBAFranchise ? 'check' : 'close'}}</mat-icon></li>
+          <li>Is an All-Star team?: <mat-icon style="position: relative; top: 5px;">{{team.isAllStar ? 'check' : 'close'}}</mat-icon></li>
         </ul>
       </div>
     </div>

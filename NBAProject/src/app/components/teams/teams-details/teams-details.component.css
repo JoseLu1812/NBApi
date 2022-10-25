@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'basket';
+  src: url('../../../fonts/Basketball.otf');
+}
+
 body {
   background-color: black;
+  font-family: 'basket', sans-serif;
 }
 
 .background-white {
