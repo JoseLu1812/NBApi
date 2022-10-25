@@ -12,6 +12,7 @@ import { throwDialogContentAlreadyAttachedError } from '@angular/cdk/dialog';
   styleUrls: ['./players-details.component.css'],
 })
 export class PlayersDetailsComponent implements OnInit {
+
   player: Player = {} as Player;
   teamOfPlayer: Team = {} as Team;
   year: number = 0;
@@ -23,7 +24,7 @@ export class PlayersDetailsComponent implements OnInit {
     private playersService: PlayersService,
     private route: ActivatedRoute,
     private teamService: TeamsService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((resp) => {
@@ -49,15 +50,23 @@ export class PlayersDetailsComponent implements OnInit {
     this.teamService.getTeams(this.year).subscribe(resp => {
       this.teamList = resp.league.standard;
       for (let t of this.teamList) {
-        if(t.teamId == this.player.teamId){
+        if (t.teamId == this.player.teamId) {
           this.teamOfPlayer = t;
         }
-      }    
+      }
     })
 
   }
 
   showPlayerImages(p: Player) {
     return `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${p.personId}.png`;
+  }
+
+  showTeamsImages(p: Player) {
+    let urlImg = ``;
+    for (let t of p.teams) {
+      urlImg = `https://cdn.nba.com/logos/nba/${t.teamId}/global/L/logo.svg`;
+    }
+    return urlImg;
   }
 }
