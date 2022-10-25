@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { TeamsRosterComponent } from './components/teams/teams-roster/teams-roster.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { StandingsComponent } from './components/standings/standings.component';
+import { CoachesComponent } from './components/coaches/coaches.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StandingsComponent } from './components/standings/standings.component';
     TeamsDetailsComponent,
     TeamsRosterComponent,
     ErrorPageComponent,
-    StandingsComponent
+    StandingsComponent,
+    CoachesComponent
   ],
   imports: [
     BrowserModule,
