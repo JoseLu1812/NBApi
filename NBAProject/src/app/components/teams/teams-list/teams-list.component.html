@@ -28,7 +28,7 @@
         <mat-card-title>{{team.fullName}}</mat-card-title>
       </mat-card-title-group>
       <img mat-card-image [src]="showTeamImages(team)"
-        onerror="this.src='https://resize.sprintercdn.com/f/261x261/products/ad20439f-5912-4821-a8aa-8a306dea2ed3/pelota-baloncesto-wilson-all-star_ad20439f-5912-4821-a8aa-8a306dea2ed3_1_2364842133.jpg'">
+      onerror="this.src='https://media.istockphoto.com/vectors/question-mark-in-a-shield-icon-vector-sign-and-symbol-isolated-on-vector-id1023572464?k=20&m=1023572464&s=170667a&w=0&h=EopKUPT7ix-yq92EZkAASv244wBsn_z-fbNpyxxTl6o='">
       <mat-card-actions>
         <a mat-button style="font-family: 'basket', sans-serif;" [routerLink]="['/team-details', year, team.urlName]">DETAILS</a>
         <a mat-button style="font-family: 'basket', sans-serif;" [routerLink]="['/team-roster', year, team.teamId]">ROSTER</a>
