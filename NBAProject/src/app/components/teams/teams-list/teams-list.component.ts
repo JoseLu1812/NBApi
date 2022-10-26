@@ -19,7 +19,7 @@ export class TeamsListComponent implements OnInit {
     this.getTeamsByYear(2022);
   }
 
-  getTeamsByYear(year: number) {
+  getTeamsByYear(year: number){
     this.teamsService.getTeams(year).subscribe(resp => {
       this.teamList = resp.league.standard;
       this.year = year;
