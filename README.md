@@ -31,7 +31,7 @@ Dentro de Teams podrás ver el listado de equipos de la NBA por año. En cada ca
 
 ## Players (José Luis Hidalgo Navas)
 
-Dentro de Players podrás ver el listado de jugadores de cada ño que han participado en la NBA.
+Dentro de Players podrás ver el listado de jugadores de cada año que han participado en la NBA.
 En cada carta existe un botón:
 
 <img src="./img/Player-list.png" />
@@ -40,7 +40,7 @@ En cada carta existe un botón:
 
 <img src="./img/Player-details.png" />
 
-## Stnadings (José Luis Gil Martín)
+## Standings (José Luis Gil Martín)
 
 Dentro de Standings podrás ver la clasificación de un día en concreto separados por conferecia
 (East and West). Puedes clicar en cada nombre de equipo para ir a ver el roster que formaban en ese
