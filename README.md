@@ -48,7 +48,7 @@ año.
 
 <img src="./img/Standings.png" />
 
-## Coaches
+## Coaches (José Luis Hidalgo Navas)
 
 Dentro de coaches podrás ver el listado de entrenadores que había por cada año en la NBA.
 
