@@ -1,1 +1,40 @@
-<p>coaches works!</p>
+
+
+<body>
+    <header>
+        <div class="center">
+          <img
+            src="https://www.freepnglogos.com/uploads/nba-logo-png/nba-debate-club-milken-hottest-new-club-the-roar-25.png"
+            alt="Logo NBA" width="30%">
+        </div>
+    </header>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="aling-items padding" style="margin-bottom: 20px;">
+        <div class="white" style="font-size: 24pt;">
+          <a routerLink="/initial-page" class="color-decoration"><span>Home</span></a><span>/</span><a routerLink="/coaches" class="color-decoration">Coaches</a>
+        </div>
+    </div>
+    <div>
+        <mat-form-field appearance="fill" class="background-white" >
+          <mat-label>Select Year</mat-label>
+          <mat-select [(ngModel)]="year">
+            <mat-option *ngFor="let year of yearsData" [value]="year" (click)="getOneCoach(year)">{{year}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div *ngFor="let coach of coachList" class=".content">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th><img [src]="showCoachImages(coach)" 
+                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/30/30234.png'"
+                    alt="Coach Image"
+                    height="190px">
+                    </th> 
+                    <th>{{coach.firstName}} {{coach.lastName}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
