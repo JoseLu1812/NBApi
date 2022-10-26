@@ -23,6 +23,6 @@
   </div>
   <div fxLayout="row wrap" fxLayoutAlign="space-around start" class="justify-content-center"
     style="background-color: black;">
-    <app-one-team *ngFor="let team of teamList" [team]="team"></app-one-team>
+    <app-one-team *ngFor="let team of teamList" [team]="team" [year]="this.year"></app-one-team>
   </div>
 </body>
