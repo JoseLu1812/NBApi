@@ -14,22 +14,25 @@
         </div>
     </div>
     <div>
-        <mat-form-field appearance="fill" class="background-white" style="font-family: 'basket', sans-serif;">
+        <mat-form-field appearance="fill" class="background-white" >
           <mat-label>Select Year</mat-label>
           <mat-select [(ngModel)]="year">
-            <mat-option *ngFor="let year of yearsData" [value]="year" (click)="getCoachByYear(year)">{{year}}
+            <mat-option *ngFor="let year of yearsData" [value]="year" (click)="getOneCoach(year)">{{year}}
             </mat-option>
           </mat-select>
         </mat-form-field>
     </div>
 
-    <div *ngFor="let coach of coachList" style="padding: 15px;">
+    <div *ngFor="let coach of coachList" class=".content">
         <table class="table">
             <tbody>
                 <tr>
-                    <th><img [src]="showCoachImages(coach)"></th>
+                    <th><img [src]="showCoachImages(coach)" 
+                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/30/30234.png'"
+                    alt="Coach Image"
+                    height="190px">
+                    </th> 
                     <th>{{coach.firstName}} {{coach.lastName}}</th>
-                    <th>{{teamOfCoach.fullName}}</th>
                 </tr>
             </tbody>
         </table>

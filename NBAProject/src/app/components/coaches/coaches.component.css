@@ -17,6 +17,11 @@
     .center {
         text-align: center;
     }
+
+    .background-white {
+      background-color: white;
+      font-family: 'basket', sans-serif;
+    }
       
     .color-decoration {
         color: #81D4FA;
@@ -38,6 +43,18 @@
     color: black;
     font-size: 50pt;
     padding: 30px;
+    width: 1850px;
+    border: 2px , solid , black;
+    margin: 10px;
+    margin-left: 25px;
+    align-items: center;
+    flex: auto;
+  }
+
+  .content{
+    align-items: center;
+    text-align: center;
+    
   }
 
   p{
