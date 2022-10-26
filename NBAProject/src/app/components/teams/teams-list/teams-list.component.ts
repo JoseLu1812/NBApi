@@ -26,9 +26,5 @@ export class TeamsListComponent implements OnInit {
     })
   }
 
-  showTeamImages(t: Team) {
-    return `https://cdn.nba.com/logos/nba/${t.teamId}/global/L/logo.svg`;
-  }
-
 
 }

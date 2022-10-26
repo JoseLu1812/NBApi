@@ -20,6 +20,7 @@ import { TeamsRosterComponent } from './components/teams/teams-roster/teams-rost
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { StandingsComponent } from './components/standings/standings.component';
 import { CoachesComponent } from './components/coaches/coaches.component';
+import { OneTeamComponent } from './components/teams/one-team/one-team.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CoachesComponent } from './components/coaches/coaches.component';
     TeamsRosterComponent,
     ErrorPageComponent,
     StandingsComponent,
-    CoachesComponent
+    CoachesComponent,
+    OneTeamComponent
   ],
   imports: [
     BrowserModule,

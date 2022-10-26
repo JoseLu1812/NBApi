@@ -1,0 +1,15 @@
+.example-card {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 80%;
+  font-family: 'basket', sans-serif;
+}
+
+.example-card img {
+  width: 270px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
